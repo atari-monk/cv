@@ -5,10 +5,13 @@ body {
 }
 
 .container {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
 }
 
 .left-column {
+    width: 33.33%;
     background-color: #f0f0f0; /* Gray background */
     padding: 20px;
 }
@@ -35,6 +38,7 @@ body {
 }
 
 .right-column {
+    width: 66.66%;
     padding: 20px;
 }
 
