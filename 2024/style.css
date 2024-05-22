@@ -33,6 +33,7 @@ header {
     border-radius: 50%;
     margin-right: 20px;
     border: 3px solid #444;
+    object-fit: cover;
 }
 
 .contact-info {
@@ -76,12 +77,12 @@ section h2 {
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 li h3 {
@@ -98,12 +99,13 @@ li p {
 footer {
     margin-top: 20px;
     padding-top: 10px;
+    border-top: 1px solid #444;
     text-align: center;
 }
 
 footer p {
     font-size: 16px;
-    margin: 0;
+    margin: 5px 0;
 }
 
 footer a {
