@@ -2,21 +2,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333; /* zmienione tło na kolor szary */
-    color: #fff; /* zmieniony kolor tekstu na biały */
+    background-color: #333;
+    color: #fff;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #222; /* zmienione tło kontenera na ciemniejszy odcień szarego */
+    background-color: #222;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    border-bottom: 1px solid #444; /* dodana kreska pod nagłówkiem */
-    padding-bottom: 10px; /* odstęp pod nagłówkiem */
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
 }
 
 header h1 {
@@ -36,11 +36,11 @@ a {
 
 section {
     margin-top: 20px;
-    padding-bottom: 20px; /* odstęp pod każdą sekcją */
+    padding-bottom: 20px;
 }
 
 section:not(:last-child) {
-    border-bottom: 1px solid #444; /* dodana kreska pod każdą sekcją, z wyjątkiem ostatniej */
+    border-bottom: 1px solid #444;
 }
 
 section h2 {
@@ -70,7 +70,7 @@ li p {
 footer {
     margin-top: 20px;
     /* border-top: 1px solid #444;  */
-    padding-top: 10px; /* odstęp nad stopką */
+    padding-top: 10px;
 }
 
 footer p {
