@@ -12,8 +12,15 @@ body {
 
 .left-column {
     width: 33.33%;
-    background-color: #f0f0f0; /* Gray background */
+    background-color: #273b70; /* Gray background */
+    color: #ffffff;
     padding: 20px;
+    text-align: center;
+}
+
+.photo {
+    margin-bottom: 20px; /* Add space below the photo */
+    display: inline-block; /* Ensure the photo is treated as a block element */
 }
 
 .photo img {
@@ -24,7 +31,7 @@ body {
 }
 
 .header {
-    height: 115px; /* Adjust size as needed */
+    height: 135px; /* Adjust size as needed */
 }
 
 .name {
@@ -40,6 +47,15 @@ body {
 .right-column {
     width: 66.66%;
     padding: 20px;
+}
+
+.contact,
+.education,
+.expertise,
+.languages,
+.experience,
+.references {
+    text-align: left; /* Align text to the left */
 }
 
 .header .contact,
