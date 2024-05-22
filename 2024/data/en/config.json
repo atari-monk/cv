@@ -1,5 +1,4 @@
 {
     "folderPath": "./../data/en/",
-    "contactlabel": "contactLabel.json",
-    "contactData": "contactData.json"
+    "dataFile": "data.json"
 }

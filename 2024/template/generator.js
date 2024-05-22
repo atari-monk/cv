@@ -1,11 +1,8 @@
 import { loadJSON } from "./loader.js";
 
 export async function generateSection(config, sectionId, createHTMLContentFn) {
-    const labelData = await loadJSON(config.folderPath + config.contactlabel);
-    const contactData = await loadJSON(config.folderPath + config.contactData);
-
+    const data = await loadJSON(config.folderPath + config.dataFile);
     const contactDiv = document.getElementById(sectionId);
-
-    const htmlContent = createHTMLContentFn(labelData, contactData);
+    const htmlContent = createHTMLContentFn(data);
     contactDiv.innerHTML = htmlContent;
 }

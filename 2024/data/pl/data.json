@@ -1,0 +1,15 @@
+{
+    "contact": {
+        "label": {
+            "contact": "Kontakt",
+            "email": "Email",
+            "phone": "Tel.",
+            "address": "Adres"
+        },
+        "data": {
+            "email": "atari.monk1@gmail.com",
+            "phone": "501 681 104",
+            "address": "ul. Żabiniec 79, 31-215 Kraków"
+        }
+    }
+}
