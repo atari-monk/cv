@@ -19,5 +19,13 @@
         "data": {
             "education": "Magister inżynier, Fizyka Środowiska, Akademia Górniczo-Hutnicza w Krakowie, 2010"
         }
+    },
+    "expertise": {
+        "label": {
+            "expertise": "Expertise"
+        },
+        "data": {
+            "expertise": ["A", "B", "C", "D"]
+        }
     }
 }

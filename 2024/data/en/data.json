@@ -19,5 +19,13 @@
         "data": {
             "education": "Master of Science in Environmental Physics, AGH University of Science and Technology in Krakow, 2010"
         }
+    },
+    "expertise": {
+        "label": {
+            "expertise": "Expertise"
+        },
+        "data": {
+            "expertise": ["A", "B", "C", "D"]
+        }
     }
 }

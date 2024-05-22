@@ -17,3 +17,15 @@ export function createEducationHTML(fileData) {
         <p>${value.education}</p>
     `;
 }
+
+export function createExpertiseHTML(fileData) {
+    const { expertise } = fileData.expertise.label;
+    const value = fileData.expertise.data;
+    let htmlContent = `<h2>${expertise}</h2>`;
+    htmlContent += "<ul>";
+    value.expertise.forEach((expertise, _index) => {
+        htmlContent += `<li>${expertise}</li>`;
+    });
+    htmlContent += "</ul>";
+    return htmlContent;
+}
