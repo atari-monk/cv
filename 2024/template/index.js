@@ -1,10 +1,5 @@
 import { generateContact } from "./contact.js";
+import { loadJSON } from "./loader.js";
 
-console.log("index.js: Script loaded successfully.");
-const config = {
-    folderPath: "./../data/",
-    labelFileName: "labelData.json",
-    contactFileName: "contactData.json",
-};
-
+const config = await loadJSON("./../data/en/config.json");
 generateContact(config);
