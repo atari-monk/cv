@@ -11,5 +11,13 @@
             "phone": "501 681 104",
             "address": "ul. Żabiniec 79, 31-215 Kraków"
         }
+    },
+    "education": {
+        "label": {
+            "education": "Edukacja"
+        },
+        "data": {
+            "education": "Magister inżynier, Fizyka Środowiska, Akademia Górniczo-Hutnicza w Krakowie, 2010"
+        }
     }
 }

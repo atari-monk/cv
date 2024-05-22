@@ -11,5 +11,13 @@
             "phone": "501 681 104",
             "address": "ul. Żabiniec 79, 31-215 Cracow"
         }
+    },
+    "education": {
+        "label": {
+            "education": "Education"
+        },
+        "data": {
+            "education": "Master of Science in Environmental Physics, AGH University of Science and Technology in Krakow, 2010"
+        }
     }
 }

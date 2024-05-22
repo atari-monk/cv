@@ -10,12 +10,10 @@ export function createContactHTML(fileData) {
 }
 
 export function createEducationHTML(fileData) {
-    const { contact, email, phone, address } = fileData.contact.label;
-    const { value } = fileData.contact.data;
+    const { education } = fileData.education.label;
+    const value = fileData.education.data;
     return `
-        <h2>${contact}</h2>
-        <p>${email}: ${value.email}</p>
-        <p>${phone}: ${value.phone}</p>
-        <p>${address}: ${value.address}</p>
+        <h2>${education}</h2>
+        <p>${value.education}</p>
     `;
 }
