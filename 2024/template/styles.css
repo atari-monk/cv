@@ -14,10 +14,14 @@ body {
 }
 
 .photo img {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
     border-radius: 50%;
     object-fit: cover;
+}
+
+.header {
+    height: 115px; /* Adjust size as needed */
 }
 
 .name {
@@ -34,12 +38,17 @@ body {
     padding: 20px;
 }
 
-.contact,
+.header .contact,
 .education,
 .expertise,
 .languages,
 .experience,
 .references {
+    margin-bottom: 20px;
+}
+
+.separator {
+    border-bottom: 2px solid #ccc; /* Gray separator line */
     margin-bottom: 20px;
 }
 
