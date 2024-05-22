@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.left-column {
+    background-color: #f0f0f0; /* Gray background */
+    padding: 20px;
+}
+
+.photo img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.right-column {
+    padding: 20px;
+}
+
+.contact,
+.education,
+.expertise,
+.languages,
+.experience,
+.references {
+    margin-bottom: 20px;
+}
+
+.contact h2,
+.education h2,
+.expertise h2,
+.languages h2,
+.experience h2,
+.references h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
