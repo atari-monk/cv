@@ -1,16 +1,22 @@
-export function generateContact() {
+import { loadJSON } from "./loader.js";
+
+export async function generateContact(config) {
     console.log("generateContact(): Generating contact information.");
 
-    const labelData = {
-        emailLabel: "Email",
-        phoneLabel: "Phone",
-        addressLabel: "Address",
-    };
-    const contactData = {
-        email: "your@email.com",
-        phone: "+123456789",
-        address: "Your Address",
-    };
+    const labelData = await loadJSON(config.folderPath + config.labelFileName);
+    const contactData = await loadJSON(
+        config.folderPath + config.contactFileName
+    );
+    // const labelData = {
+    //     emailLabel: "Email",
+    //     phoneLabel: "Phone",
+    //     addressLabel: "Address",
+    // };
+    // const contactData = {
+    //     email: "your@email.com",
+    //     phone: "+123456789",
+    //     address: "Your Address",
+    // };
 
     const contactDiv = document.getElementById("contact");
 
