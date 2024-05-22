@@ -1,5 +1,6 @@
-import { generateContact } from "./contact.js";
+import { generateSection } from "./contact.js";
 import { loadJSON } from "./loader.js";
+import { createContactHTML } from "./createContactHTML.js";
 
 const config = await loadJSON("./../data/en/config.json");
-generateContact(config);
+generateSection(config, "contact", createContactHTML);
