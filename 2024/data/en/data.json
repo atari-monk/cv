@@ -25,7 +25,28 @@
             "expertise": "Expertise"
         },
         "data": {
-            "expertise": ["A", "B", "C", "D"]
+            "expertise": [
+                {
+                    "label": "Programming Languages",
+                    "description": "C#, TypeScript, JavaScript, C++"
+                },
+                {
+                    "label": "Frameworks and Libraries",
+                    "description": "Entity Framework, DI, Containers, Wpf, Winforms, MVVM, CommandDotNet"
+                },
+                {
+                    "label": "Tools and Technologies",
+                    "description": "Powershell, Git, VS Code, Visual Studio"
+                },
+                {
+                    "label": "Methodologies",
+                    "description": "SOLID, TDD"
+                },
+                {
+                    "label": "Others",
+                    "description": "Creation and integration of WebAPI"
+                }
+            ]
         }
     },
     "languages": {
@@ -45,6 +66,45 @@
         "data": {
             "name": "Krzysztof Mazanek",
             "title": "Software Developer/Tester/Technologist/Artist"
+        }
+    },
+    "experience": {
+        "label": {
+            "experience": "Experience"
+        },
+        "data": {
+            "experience": [
+                {
+                    "company": "Pirios",
+                    "job_title": "Software Developer",
+                    "dates": "2018-2020",
+                    "description": "Implementation of features in web applications in the .NET environment."
+                },
+                {
+                    "company": "Institute of Animal Breeding - National Research Institute",
+                    "job_title": "Software Developer",
+                    "dates": "2012-2017",
+                    "description": "Development of software supporting laboratory activities."
+                },
+                {
+                    "company": "Ericpol",
+                    "job_title": "Software Developer",
+                    "dates": "2012",
+                    "description": "Development and implementation of software for the telecommunications industry. Collaboration with international development teams."
+                },
+                {
+                    "company": "BmsCreative",
+                    "job_title": "Software Developer",
+                    "dates": "2011",
+                    "description": "Work on front-end of CRM applications."
+                },
+                {
+                    "company": "Interia.pl",
+                    "job_title": "Software Developer",
+                    "dates": "2010",
+                    "description": "Front-end development for a calendar plugin in a desktop application."
+                }
+            ]
         }
     },
     "links": {
