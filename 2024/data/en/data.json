@@ -40,5 +40,11 @@
             "german": "Basic",
             "polish": "Native"
         }
+    },
+    "header": {
+        "data": {
+            "name": "Krzysztof Mazanek",
+            "title": "Software Developer/Tester/Technologist/Artist"
+        }
     }
 }

@@ -54,7 +54,7 @@ body {
 .expertise,
 .languages,
 .experience,
-.references {
+.links {
     text-align: left; /* Align text to the left */
 }
 
@@ -63,7 +63,7 @@ body {
 .expertise,
 .languages,
 .experience,
-.references {
+.links {
     margin-bottom: 20px;
 }
 
@@ -77,7 +77,7 @@ body {
 .expertise h2,
 .languages h2,
 .experience h2,
-.references h2 {
+.links h2 {
     font-size: 18px;
     margin-bottom: 10px;
 }

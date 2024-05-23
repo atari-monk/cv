@@ -28,7 +28,7 @@
             "expertise": ["A", "B", "C", "D"]
         }
     },
-    "language": {
+    "languages": {
         "label": {
             "languages": "Języki",
             "english": "Angielski",
@@ -39,6 +39,12 @@
             "english": "Biegły (Czytanie, Słuchanie), Średni (Mówienie)",
             "german": "Podstawowy",
             "polish": "Ojczysty"
+        }
+    },
+    "header": {
+        "data": {
+            "name": "Krzysztof Mazanek",
+            "title": "Programista/Tester/Technolog/Artysta"
         }
     }
 }

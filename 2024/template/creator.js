@@ -40,3 +40,11 @@ export function createLanguagesHTML(fileData) {
         <p>${polish}: ${value.polish}</p>
     `;
 }
+
+export function createHeaderHTML(fileData) {
+    const { name, title } = fileData.header.data;
+    return `
+        <h1 class="name">${name}</h1>
+        <p class="title">${title}</p>
+    `;
+}
