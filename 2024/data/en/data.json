@@ -27,5 +27,18 @@
         "data": {
             "expertise": ["A", "B", "C", "D"]
         }
+    },
+    "language": {
+        "label": {
+            "languages": "Languages",
+            "english": "English",
+            "german": "German",
+            "polski": "Polish"
+        },
+        "data": {
+            "english": "Fluent (Reading, Listening), Intermediate (Speaking)",
+            "german": "Basic",
+            "polski": "Native"
+        }
     }
 }

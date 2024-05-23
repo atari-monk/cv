@@ -27,5 +27,18 @@
         "data": {
             "expertise": ["A", "B", "C", "D"]
         }
+    },
+    "language": {
+        "label": {
+            "languages": "Języki",
+            "english": "Angielski",
+            "german": "Niemiecki",
+            "polski": "Polski"
+        },
+        "data": {
+            "english": "Biegły (Czytanie, Słuchanie), Średni (Mówienie)",
+            "german": "Podstawowy",
+            "polski": "Ojczysty"
+        }
     }
 }
