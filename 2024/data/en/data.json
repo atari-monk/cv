@@ -1,4 +1,5 @@
 {
+    "pageTitle": "CV_kmazanek_en",
     "contact": {
         "label": {
             "contact": "Contact",
@@ -28,7 +29,15 @@
             "expertise": [
                 {
                     "label": "Programming Languages",
-                    "description": "C#, TypeScript, JavaScript, C++"
+                    "description": "C#, TypeScript, JavaScript, Python, C++, C, Powershell"
+                },
+                {
+                    "label": "Methodologies",
+                    "description": "SOLID, TDD"
+                },
+                {
+                    "label": "Others",
+                    "description": "WebAPI"
                 },
                 {
                     "label": "Frameworks and Libraries",
@@ -37,14 +46,6 @@
                 {
                     "label": "Tools and Technologies",
                     "description": "Powershell, Git, VS Code, Visual Studio, GitHub, Azure"
-                },
-                {
-                    "label": "Methodologies",
-                    "description": "SOLID, TDD"
-                },
-                {
-                    "label": "Others",
-                    "description": "Creation and integration of WebAPI"
                 }
             ]
         }

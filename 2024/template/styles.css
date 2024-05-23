@@ -89,3 +89,7 @@ body {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+.expertise li {
+    margin-bottom: 7px;
+}

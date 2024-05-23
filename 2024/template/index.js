@@ -1,6 +1,7 @@
-import { generateSection } from "./generator.js";
+import { setElInnerText, setDivInnerHTML } from "./generator.js";
 import { loadJSON } from "./loader.js";
 import {
+    getPageTitle,
     createContactHTML,
     createEducationHTML,
     createExpertiseHTML,
@@ -16,10 +17,11 @@ const language = languages.find((l) => l === languageConfig.language);
 if (!language) throw new Error("Language not selected");
 const config = await loadJSON(`./../data/${language}/config.json`);
 const data = await loadJSON(config.folderPath + config.dataFile);
-generateSection(data, "contact", createContactHTML);
-generateSection(data, "education", createEducationHTML);
-generateSection(data, "expertise", createExpertiseHTML);
-generateSection(data, "languages", createLanguagesHTML);
-generateSection(data, "header", createHeaderHTML);
-generateSection(data, "experience", createExperienceHTML);
-generateSection(data, "links", createLinksHTML);
+setElInnerText(data, "pageTitle", getPageTitle);
+setDivInnerHTML(data, "contact", createContactHTML);
+setDivInnerHTML(data, "education", createEducationHTML);
+setDivInnerHTML(data, "expertise", createExpertiseHTML);
+setDivInnerHTML(data, "languages", createLanguagesHTML);
+setDivInnerHTML(data, "header", createHeaderHTML);
+setDivInnerHTML(data, "experience", createExperienceHTML);
+setDivInnerHTML(data, "links", createLinksHTML);

@@ -1,3 +1,7 @@
+export function getPageTitle(fileData) {
+    return fileData.pageTitle;
+}
+
 export function createContactHTML(fileData) {
     const { contact, email, phone, address } = fileData.contact.label;
     const value = fileData.contact.data;
