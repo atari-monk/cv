@@ -29,3 +29,14 @@ export function createExpertiseHTML(fileData) {
     htmlContent += "</ul>";
     return htmlContent;
 }
+
+export function createLanguagesHTML(fileData) {
+    const { languages, english, german, polish } = fileData.languages.label;
+    const value = fileData.languages.data;
+    return `
+        <h2>${languages}</h2>
+        <p>${english}: ${value.english}</p>
+        <p>${german}: ${value.german}</p>
+        <p>${polish}: ${value.polish}</p>
+    `;
+}

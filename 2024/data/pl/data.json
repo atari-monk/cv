@@ -33,12 +33,12 @@
             "languages": "Języki",
             "english": "Angielski",
             "german": "Niemiecki",
-            "polski": "Polski"
+            "polish": "Polski"
         },
         "data": {
             "english": "Biegły (Czytanie, Słuchanie), Średni (Mówienie)",
             "german": "Podstawowy",
-            "polski": "Ojczysty"
+            "polish": "Ojczysty"
         }
     }
 }

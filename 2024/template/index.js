@@ -16,3 +16,4 @@ const data = await loadJSON(config.folderPath + config.dataFile);
 generateSection(data, "contact", createContactHTML);
 generateSection(data, "education", createEducationHTML);
 generateSection(data, "expertise", createExpertiseHTML);
+generateSection(data, "languages", createLanguagesHTML);

@@ -28,17 +28,17 @@
             "expertise": ["A", "B", "C", "D"]
         }
     },
-    "language": {
+    "languages": {
         "label": {
             "languages": "Languages",
             "english": "English",
             "german": "German",
-            "polski": "Polish"
+            "polish": "Polish"
         },
         "data": {
             "english": "Fluent (Reading, Listening), Intermediate (Speaking)",
             "german": "Basic",
-            "polski": "Native"
+            "polish": "Native"
         }
     }
 }
