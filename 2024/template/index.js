@@ -10,11 +10,10 @@ import {
     createLinksHTML,
 } from "./creator.js";
 
-const languages = {
-    pl: "pl",
-    en: "en",
-};
-const language = languages.en;
+const languages = ["pl", "en"];
+const languageConfig = await loadJSON(`./../data/config.json`);
+const language = languages.find((l) => l === languageConfig.language);
+if (!language) throw new Error("Language not selected");
 const config = await loadJSON(`./../data/${language}/config.json`);
 const data = await loadJSON(config.folderPath + config.dataFile);
 generateSection(data, "contact", createContactHTML);
