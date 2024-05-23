@@ -6,6 +6,7 @@ import {
     createExpertiseHTML,
     createLanguagesHTML,
     createHeaderHTML,
+    createLinksHTML,
 } from "./creator.js";
 
 const languages = {
@@ -20,3 +21,4 @@ generateSection(data, "education", createEducationHTML);
 generateSection(data, "expertise", createExpertiseHTML);
 generateSection(data, "languages", createLanguagesHTML);
 generateSection(data, "header", createHeaderHTML);
+generateSection(data, "links", createLinksHTML);

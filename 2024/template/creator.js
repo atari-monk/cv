@@ -48,3 +48,15 @@ export function createHeaderHTML(fileData) {
         <p class="title">${title}</p>
     `;
 }
+
+export function createLinksHTML(fileData) {
+    const { online_presence } = fileData.links.label;
+    const value = fileData.links.data;
+    let htmlContent = `<h2>${online_presence}</h2>`;
+    value.forEach((item, _index) => {
+        htmlContent += "<p>";
+        htmlContent += `<a href="${item.link}">${item.title}</a>`;
+        htmlContent += "</p>";
+    });
+    return htmlContent;
+}

@@ -46,5 +46,20 @@
             "name": "Krzysztof Mazanek",
             "title": "Programista/Tester/Technolog/Artysta"
         }
+    },
+    "links": {
+        "label": {
+            "online_presence": "Obecność Online"
+        },
+        "data": [
+            {
+                "link": "https://github.com/atari-monk",
+                "title": "Profil GitHub"
+            },
+            {
+                "link": "https://atari-monk.github.io/notes_app/public_page/build/?category=DIY",
+                "title": "Strona Projektów"
+            }
+        ]
     }
 }
