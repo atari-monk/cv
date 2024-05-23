@@ -22,21 +22,21 @@
     },
     "expertise": {
         "label": {
-            "expertise": "Expertise"
+            "expertise": "Ekspertyza"
         },
         "data": {
             "expertise": [
                 {
                     "label": "Języki programowania",
-                    "description": "C#, TypeScript, JavaScript, C++"
+                    "description": "C#, TypeScript, JavaScript, C++, C"
                 },
                 {
                     "label": "Frameworki i biblioteki",
-                    "description": "Entity Framework, DI, Containers, Wpf, Winforms, MVVM, CommandDotNet"
+                    "description": "Nest-js, React, Entity Framework, DIContainers, Wpf-MVVM, Winforms"
                 },
                 {
                     "label": "Narzędzia i technologie",
-                    "description": "Powershell, Git, VS Code, Visual Studio"
+                    "description": "Powershell, Git, VS Code, Visual Studio, GitHub, Azure"
                 },
                 {
                     "label": "Metodologie",
@@ -77,13 +77,13 @@
                 {
                     "company": "Pirios",
                     "job_title": "Programista",
-                    "dates": "2018-2020",
+                    "dates": "2019-2020",
                     "description": "Implementacja funkcji w aplikacjach sieciowych w środowisku .NET."
                 },
                 {
                     "company": "Instytut Zootechniki-Państwowy Instytut Badawczy",
                     "job_title": "Programista",
-                    "dates": "2012-2017",
+                    "dates": "2013-2019",
                     "description": "Opracowywanie oprogramowania wspierającego działalność laboratorium."
                 },
                 {
@@ -96,7 +96,7 @@
                     "company": "BmsCreative",
                     "job_title": "Programista",
                     "dates": "2011",
-                    "description": "Prace nad front-end aplikacji CRM."
+                    "description": "Funkcje Front-end w aplikacji CRM."
                 },
                 {
                     "company": "Interia.pl",

@@ -32,11 +32,11 @@
                 },
                 {
                     "label": "Frameworks and Libraries",
-                    "description": "Entity Framework, DI, Containers, Wpf, Winforms, MVVM, CommandDotNet"
+                    "description": "Nest-js, React, Entity Framework, DIContainers, Wpf-MVVM, Winforms"
                 },
                 {
                     "label": "Tools and Technologies",
-                    "description": "Powershell, Git, VS Code, Visual Studio"
+                    "description": "Powershell, Git, VS Code, Visual Studio, GitHub, Azure"
                 },
                 {
                     "label": "Methodologies",
@@ -77,13 +77,13 @@
                 {
                     "company": "Pirios",
                     "job_title": "Software Developer",
-                    "dates": "2018-2020",
+                    "dates": "2019-2020",
                     "description": "Implementation of features in web applications in the .NET environment."
                 },
                 {
                     "company": "Institute of Animal Breeding - National Research Institute",
                     "job_title": "Software Developer",
-                    "dates": "2012-2017",
+                    "dates": "2013-2019",
                     "description": "Development of software supporting laboratory activities."
                 },
                 {
@@ -96,7 +96,7 @@
                     "company": "BmsCreative",
                     "job_title": "Software Developer",
                     "dates": "2011",
-                    "description": "Work on front-end of CRM applications."
+                    "description": "Front-end functions of CRM application."
                 },
                 {
                     "company": "Interia.pl",
