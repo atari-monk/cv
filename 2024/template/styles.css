@@ -42,6 +42,14 @@ body {
 .title {
     font-size: 18px;
     margin-top: 5px;
+    color: #797575;
+}
+
+.dates,
+.company {
+    font-size: 16px;
+    color: #797575;
+    font-weight: bold;
 }
 
 .right-column {

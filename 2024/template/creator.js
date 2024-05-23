@@ -61,8 +61,8 @@ export function createExperienceHTML(fileData) {
     htmlContent += "<ul>";
     value.forEach((item, _index) => {
         htmlContent += "<li>";
-        htmlContent += `<p>${item.dates}</p>`;
-        htmlContent += `<p>${item.company}</p>`;
+        htmlContent += `<p class="dates">${item.dates}</p>`;
+        htmlContent += `<p class="company">${item.company}</p>`;
         htmlContent += `<p>${item.description}</p>`;
         htmlContent += "</li>";
     });
