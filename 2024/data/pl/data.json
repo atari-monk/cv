@@ -114,12 +114,12 @@
         },
         "data": [
             {
-                "link": "https://github.com/atari-monk",
-                "title": "Profil GitHub"
+                "link": "https://atari-monk.github.io/doc-site/portfolio/portfolio.html",
+                "title": "Portfolio"
             },
             {
-                "link": "https://atari-monk.github.io/notes_app/public_page/build/?category=DIY",
-                "title": "Strona Projektów"
+                "link": "https://github.com/atari-monk",
+                "title": "Profil GitHub"
             }
         ]
     }
