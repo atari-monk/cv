@@ -29,7 +29,7 @@
             "expertise": [
                 {
                     "label": "Programming Languages",
-                    "description": "C#, TypeScript, JavaScript, Python, C++, C, Powershell"
+                    "description": "C#, TypeScript, JavaScript, Python, C++, C"
                 },
                 {
                     "label": "Methodologies",
@@ -66,7 +66,7 @@
     "header": {
         "data": {
             "name": "Krzysztof Mazanek",
-            "title": "Software Developer/Tester/Technologist/Artist"
+            "title": "Software Developer/Tester"
         }
     },
     "experience": {
