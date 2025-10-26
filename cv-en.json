@@ -1,0 +1,75 @@
+{
+	"PageTitle": "John Smith CV (English)",
+	"FullName": "John Smith",
+	"JobTitle": "Full Stack Developer",
+	"Email": "john.smith.dev@example.com",
+	"Phone": "555 123 4567",
+	"Address": "123 Main Street, 10001 New York",
+	"Education": "Bachelor of Science in Computer Science, Tech University, 2015",
+	"Expertise": [
+		{
+			"Expertise": "Programming Languages",
+			"Description": "Java, TypeScript, Python, Kotlin, Swift"
+		},
+		{
+			"Expertise": "Methodologies",
+			"Description": "Agile, Scrum, CI/CD"
+		},
+		{
+			"Expertise": "Others",
+			"Description": "Microservices, REST APIs"
+		},
+		{
+			"Expertise": "Frameworks and Libraries",
+			"Description": "Spring Boot, React Native, Vue.js, Express.js"
+		},
+		{
+			"Expertise": "Tools and Technologies",
+			"Description": "Docker, Kubernetes, AWS, Jenkins, GitLab"
+		}
+	],
+	"Language": [
+		{
+			"Language": "English",
+			"Skill": "Native"
+		},
+		{
+			"Language": "Spanish",
+			"Skill": "Intermediate"
+		},
+		{
+			"Language": "French",
+			"Skill": "Basic"
+		}
+	],
+	"Experience": [
+		{
+			"Company": "Tech Innovations Inc.",
+			"JobTitle": "Senior Software Developer",
+			"Dates": "2020-Present",
+			"Description": "Leading development of cloud-native applications using microservices architecture."
+		},
+		{
+			"Company": "Digital Solutions LLC",
+			"JobTitle": "Full Stack Developer",
+			"Dates": "2017-2020",
+			"Description": "Developed web and mobile applications for various clients across different industries."
+		},
+		{
+			"Company": "StartUp Ventures",
+			"JobTitle": "Junior Developer",
+			"Dates": "2015-2017",
+			"Description": "Built and maintained company's main product using modern web technologies."
+		}
+	],
+	"Link": [
+		{
+			"Link": "https://portfolio.example.com",
+			"Title": "My Portfolio"
+		},
+		{
+			"Link": "https://github.com/johnsmith-example",
+			"Title": "GitHub Profile"
+		}
+	]
+}

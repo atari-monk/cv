@@ -1,0 +1,185 @@
+:root {
+	/* Colors */
+	--primary-blue: #273b70;
+	--text-light: #ffffff;
+	--text-gray: #797575;
+	--separator-color: #ccc;
+
+	/* Font Sizes */
+	--font-large: 24px;
+	--font-medium: 18px;
+	--font-regular: 16px;
+
+	/* Spacing */
+	--spacing-mega: 60px;
+	--spacing-huge: 40px;
+	--spacing-large: 20px;
+	--spacing-medium: 10px;
+	--spacing-small: 5px;
+
+	/* Layout */
+	--container-max-width: 800px;
+	--left-column-width: 40%;
+	--right-column-width: 66.66%;
+	--header-height: 90px;
+	--photo-size: 120px;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	display: flex;
+}
+
+.left-column {
+	width: var(--left-column-width);
+	background-color: var(--primary-blue);
+	color: var(--text-light);
+	padding: var(--spacing-large);
+	text-align: center;
+}
+
+.photo {
+	margin-bottom: var(--spacing-large);
+	display: inline-block;
+}
+
+.photo img {
+	width: var(--photo-size);
+	height: var(--photo-size);
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.header {
+	height: var(--header-height);
+	margin-bottom: 20px;
+}
+
+.name {
+	font-size: var(--font-large);
+	margin-top: 50px;
+}
+
+.title {
+	font-size: var(--font-medium);
+	margin-top: var(--spacing-small);
+	color: var(--text-gray);
+}
+
+.dates {
+	font-size: var(--font-regular);
+	color: var(--text-gray);
+	font-weight: bold;
+}
+
+.company {
+	font-size: var(--font-regular);
+	color: var(--text-gray);
+	font-weight: bold;
+}
+
+.right-column {
+	width: var(--right-column-width);
+	padding: var(--spacing-large);
+}
+
+.contact {
+	text-align: left;
+	margin-bottom: var(--spacing-large);
+}
+
+.education {
+	text-align: left;
+	margin-bottom: var(--spacing-large);
+}
+
+.expertise {
+	text-align: left;
+	margin-bottom: var(--spacing-large);
+}
+
+.language {
+	text-align: left;
+	margin-bottom: var(--spacing-large);
+}
+
+.experience {
+	text-align: left;
+	margin-bottom: var(--spacing-large);
+}
+
+.link {
+	text-align: left;
+	margin-bottom: var(--spacing-large);
+}
+
+.separator {
+	border-bottom: 2px solid var(--separator-color);
+	margin-bottom: var(--spacing-large);
+}
+
+.contact h2 {
+	font-size: var(--font-medium);
+	margin-bottom: var(--spacing-medium);
+}
+
+.education h2 {
+	font-size: var(--font-medium);
+	margin-bottom: var(--spacing-medium);
+}
+
+.expertise h2 {
+	font-size: var(--font-medium);
+	margin-bottom: var(--spacing-medium);
+}
+
+.language h2 {
+	font-size: var(--font-medium);
+	margin-bottom: var(--spacing-medium);
+}
+
+.experience h2 {
+	font-size: var(--font-medium);
+	margin-bottom: var(--spacing-medium);
+}
+
+.link h2 {
+	font-size: var(--font-medium);
+	margin-bottom: var(--spacing-medium);
+}
+
+.expertise li {
+	margin-bottom: var(--spacing-medium);
+}
+
+.expertise-title + p {
+	margin-top: -5px;
+	margin-left: var(--spacing-medium);
+}
+
+.json-loader-btn {
+	padding: 14px 28px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	color: #333;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.json-loader-btn:hover {
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+	transform: translateY(-2px);
+}
