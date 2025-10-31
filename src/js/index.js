@@ -3,7 +3,7 @@ import {
 	createJSONFileButton,
 	setTextContent,
 	setInnerHTML,
-} from "./utils.js";
+} from "../utils.js";
 import {
 	getHeader,
 	getContact,
@@ -12,10 +12,9 @@ import {
 	getLanguage,
 	getExperience,
 	getLink,
-} from "./cv-section.js";
+} from "./cv.js";
 
-const text = await getJSON(`./text-en.json`);
-//const cv = await getJSON(`./cv-en.json`);
+const text = await getJSON(`./public/text-en.json`);
 const jsonButton = createJSONFileButton((cv) => {
 	jsonButton.remove();
 
@@ -28,4 +27,6 @@ const jsonButton = createJSONFileButton((cv) => {
 	setInnerHTML("experience", getExperience(text, cv));
 	setInnerHTML("link", getLink(text, cv));
 });
-document.body.appendChild(jsonButton);
+const root = document.getElementById("root");
+if (!root) throw new Error("Cant find element with id=root");
+root.appendChild(jsonButton);
