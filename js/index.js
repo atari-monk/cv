@@ -1,37 +1,40 @@
 import {
-    getJSON,
-    createJSONFileButton,
-    setTextContent,
-    setInnerHTML,
+	getJSON,
+	createJSONFileButton,
+	setTextContent,
+	setInnerHTML,
 } from "./utils.js";
 import {
-    getHeader,
-    getContact,
-    getEducation,
-    getExpertise,
-    getLanguage,
-    getExperience,
-    getLink,
+	getHeader,
+	getContact,
+	getEducation,
+	getExpertise,
+	getLanguage,
+	getExperience,
+	getLink,
 } from "./cv.js";
+import { initPhotoUpload } from "./photo-upload.js";
 
 const text = await getJSON(`./assets/data/text-en.json`);
 
 const jsonButton = createJSONFileButton(handleCVData);
 
 function handleCVData(cv) {
-    jsonButton.remove();
+	jsonButton.remove();
 
-    setTextContent("pageTitle", cv.PageTitle);
-    setInnerHTML("header", getHeader(cv));
-    setInnerHTML("contact", getContact(text, cv));
-    setInnerHTML("education", getEducation(text, cv));
-    setInnerHTML("expertise", getExpertise(text, cv));
-    setInnerHTML("language", getLanguage(text, cv));
-    setInnerHTML("experience", getExperience(text, cv));
-    setInnerHTML("link", getLink(text, cv));
+	setTextContent("pageTitle", cv.PageTitle);
+	setInnerHTML("header", getHeader(cv));
+	setInnerHTML("contact", getContact(text, cv));
+	setInnerHTML("education", getEducation(text, cv));
+	setInnerHTML("expertise", getExpertise(text, cv));
+	setInnerHTML("language", getLanguage(text, cv));
+	setInnerHTML("experience", getExperience(text, cv));
+	setInnerHTML("link", getLink(text, cv));
 }
 
 const root = document.getElementById("root");
 if (!root) throw new Error("Cant find element with id=root");
 
 root.appendChild(jsonButton);
+
+initPhotoUpload();
