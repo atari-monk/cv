@@ -166,7 +166,7 @@ body {
 
 .json-loader-btn {
 	padding: 14px 28px;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(10px);
 	color: #333;
 	border: 1px solid rgba(255, 255, 255, 0.2);
@@ -179,7 +179,7 @@ body {
 }
 
 .json-loader-btn:hover {
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 1);
 	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 	transform: translateY(-2px);
 }
@@ -189,6 +189,12 @@ body {
 .photo-container {
 	position: relative;
 	display: inline-block;
+	margin-bottom: var(--spacing-large);
+}
+
+.json-button-container {
+	margin-top: var(--spacing-medium);
+	text-align: center;
 }
 
 .photo {
@@ -201,6 +207,10 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	display: none;
+}
+
+.photo-container:hover .photo-upload-container {
+	display: block;
 }
 
 .photo:hover .photo-upload-container {
@@ -266,7 +276,7 @@ body {
 .json-download-link {
 	display: inline-block;
 	padding: 12px 24px;
-	background-color: var(--text-light);
+	background-color: rgba(255, 255, 255, 0.5);
 	color: var(--primary-blue);
 	text-decoration: none;
 	border-radius: 6px;
@@ -276,7 +286,7 @@ body {
 }
 
 .json-download-link:hover {
-	background-color: #f0f0f0;
+	background-color: rgba(255, 255, 255, 1);
 	transform: translateY(-2px);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }

@@ -50,7 +50,7 @@ export function setInnerHTML(id, html) {
 	return el;
 }
 
-export function createJSONFileButton(onLoad) {
+export function createJSONFileButton(onLoad, container = null) {
 	const input = document.createElement("input");
 	input.type = "file";
 	input.accept = ".json";
@@ -78,6 +78,12 @@ export function createJSONFileButton(onLoad) {
 	});
 
 	button.addEventListener("click", () => input.click());
+
+	// If a container is specified, add the button to it
+	if (container) {
+		container.appendChild(button);
+		return button;
+	}
 
 	return button;
 }

@@ -20,7 +20,26 @@ initCVDisplay();
 
 const text = await getJSON(`./assets/data/text-en.json`);
 
-const jsonButton = createJSONFileButton(handleCVData);
+const photoContainer = document.querySelector(".photo-container");
+let jsonButton;
+
+if (photoContainer) {
+	// Create a container for the button
+	const buttonContainer = document.createElement("div");
+	buttonContainer.className = "json-button-container";
+
+	// Create the button and add it to the container
+	jsonButton = createJSONFileButton(handleCVData, buttonContainer);
+
+	// Insert the button container after the photo
+	photoContainer.parentNode.insertBefore(
+		buttonContainer,
+		photoContainer.nextSibling
+	);
+} else {
+	// Fallback: create the button normally
+	jsonButton = createJSONFileButton(handleCVData);
+}
 
 function handleCVData(cv) {
 	jsonButton.remove();
@@ -36,9 +55,9 @@ function handleCVData(cv) {
 	setInnerHTML("link", getLink(text, cv));
 }
 
-const root = document.getElementById("root");
-if (!root) throw new Error("Cant find element with id=root");
+// const root = document.getElementById("root");
+// if (!root) throw new Error("Cant find element with id=root");
 
-root.appendChild(jsonButton);
+// root.appendChild(jsonButton);
 
 initPhotoUpload();
