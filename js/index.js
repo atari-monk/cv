@@ -14,6 +14,9 @@ import {
 	getLink,
 } from "./cv.js";
 import { initPhotoUpload } from "./photo-upload.js";
+import { initCVDisplay, onCVDataLoaded } from "./display-mode.js";
+
+initCVDisplay();
 
 const text = await getJSON(`./assets/data/text-en.json`);
 
@@ -21,6 +24,7 @@ const jsonButton = createJSONFileButton(handleCVData);
 
 function handleCVData(cv) {
 	jsonButton.remove();
+	onCVDataLoaded();
 
 	setTextContent("pageTitle", cv.PageTitle);
 	setInnerHTML("header", getHeader(cv));

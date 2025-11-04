@@ -238,3 +238,79 @@ body {
 		user-select: text !important;
 	}
 }
+
+/* CV Generator Card Styles */
+.cv-generator-card {
+	background-color: var(--primary-blue);
+	color: var(--text-light);
+	text-align: center;
+	padding: var(--spacing-large);
+	margin-bottom: var(--spacing-large);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-generator-card h1 {
+	margin: 0;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+/* JSON Download Section Styles */
+.json-download-section {
+	text-align: center;
+	margin-top: var(--spacing-huge);
+	padding-top: var(--spacing-large);
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.json-download-link {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: var(--text-light);
+	color: var(--primary-blue);
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.json-download-link:hover {
+	background-color: #f0f0f0;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Utility classes for showing/hiding elements */
+.hidden {
+	display: none !important;
+}
+
+.visible {
+	display: block !important;
+}
+
+/* Non-CV elements - hidden when CV is loaded and during print */
+.non-cv-element {
+	display: block;
+}
+
+.cv-loaded .non-cv-element {
+	display: none !important;
+}
+
+/* Print styles - hide non-CV elements */
+@media print {
+	.non-cv-element {
+		display: none !important;
+	}
+
+	.photo {
+		filter: none !important;
+	}
+
+	* {
+		-webkit-user-select: text !important;
+		user-select: text !important;
+	}
+}

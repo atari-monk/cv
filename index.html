@@ -8,24 +8,40 @@
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
+		<!-- CV Generator Card -->
+		<div class="cv-generator-card non-cv-element">
+			<h1>CV Generator</h1>
+		</div>
+
 		<div class="container" id="root">
 			<div class="left-column">
+				<!-- Photo Section -->
 				<div class="photo-container">
 					<div class="photo">
 						<img id="cv-photo" src="./assets/images/cv_photo.png" alt="Photo" />
 						<div
 							id="photo-upload-container"
-							class="photo-upload-container"
+							class="photo-upload-container non-cv-element"
 						></div>
 					</div>
 				</div>
+
+				<!-- Data Sections -->
 				<div id="contact" class="contact"></div>
 				<div id="education" class="education"></div>
 				<div id="expertise" class="expertise"></div>
 				<div id="language" class="language"></div>
+
+				<!-- JSON Schema Download Link -->
+				<div class="json-download-section non-cv-element">
+					<a href="./download-schema.html" class="json-download-link">
+						Download JSON Schema
+					</a>
+				</div>
 			</div>
 			<div class="right-column">
-				<div id="header" class="header">
+				<!-- Header (hidden by default) -->
+				<div id="header" class="header" style="display: none">
 					<h1 class="name">[Your Name]</h1>
 					<p class="title">[Your Title]</p>
 				</div>
