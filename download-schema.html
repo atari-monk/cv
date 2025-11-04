@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Download JSON Schema</title>
+		<style>
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+				background-color: #f5f7fa;
+				color: #333;
+			}
+
+			.container {
+				background-color: white;
+				border-radius: 10px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				padding: 30px;
+				margin-top: 20px;
+			}
+
+			h1 {
+				color: #2c3e50;
+				margin-bottom: 30px;
+				text-align: center;
+			}
+
+			.description {
+				background-color: #e8f4fd;
+				border-left: 4px solid #3498db;
+				padding: 15px;
+				margin-bottom: 25px;
+				border-radius: 0 5px 5px 0;
+			}
+
+			.json-preview {
+				background-color: #f8f9fa;
+				border: 1px solid #e1e4e8;
+				border-radius: 5px;
+				padding: 15px;
+				margin: 20px 0;
+				font-family: "Courier New", monospace;
+				white-space: pre-wrap;
+				max-height: 300px;
+				overflow-y: auto;
+			}
+
+			.filename-section {
+				margin: 25px 0;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 8px;
+				font-weight: 600;
+				color: #2c3e50;
+			}
+
+			.filename-input {
+				width: 100%;
+				padding: 10px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				font-size: 16px;
+			}
+
+			.filename-suggestion {
+				color: #7f8c8d;
+				font-size: 14px;
+				margin-top: 5px;
+				font-style: italic;
+			}
+
+			.download-btn {
+				display: block;
+				width: 100%;
+				padding: 12px 20px;
+				background-color: #3498db;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				font-size: 16px;
+				font-weight: 600;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				margin-top: 20px;
+			}
+
+			.download-btn:hover {
+				background-color: #2980b9;
+			}
+
+			.download-btn:active {
+				transform: translateY(1px);
+			}
+
+			.download-btn:disabled {
+				background-color: #bdc3c7;
+				cursor: not-allowed;
+			}
+
+			.format-note {
+				background-color: #fff8e1;
+				border: 1px solid #ffd54f;
+				border-radius: 5px;
+				padding: 10px;
+				margin-top: 15px;
+				font-size: 14px;
+			}
+
+			.loading {
+				text-align: center;
+				color: #7f8c8d;
+				font-style: italic;
+			}
+
+			.error {
+				background-color: #ffeaa7;
+				border: 1px solid #fdcb6e;
+				border-radius: 5px;
+				padding: 15px;
+				margin: 15px 0;
+				color: #d63031;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Download JSON Schema</h1>
+
+			<div class="description">
+				<p>
+					Download an empty JSON schema for your CV. The schema structure is
+					fixed, but you can name the file appropriately.
+				</p>
+			</div>
+
+			<div class="filename-section">
+				<label for="filename">Filename:</label>
+				<input
+					type="text"
+					id="filename"
+					class="filename-input"
+					value="John Smith CV (English)"
+					placeholder="Enter filename for your CV"
+				/>
+				<div class="filename-suggestion">
+					Suggested format: Your Name CV (Language)
+				</div>
+			</div>
+
+			<div class="format-note">
+				<strong>Note:</strong> The JSON structure is fixed and follows the
+				standard CV format. Only the filename can be customized.
+			</div>
+
+			<h3>Schema Preview:</h3>
+			<div class="json-preview" id="jsonPreview">
+				<div class="loading">Loading schema...</div>
+			</div>
+
+			<button class="download-btn" id="downloadBtn" disabled>
+				Download JSON Schema
+			</button>
+			<div id="errorMessage" class="error" style="display: none"></div>
+		</div>
+
+		<script>
+			// Load schema from JSON file
+			async function loadSchema() {
+				try {
+					const response = await fetch("../assets/data/cv-schema.json");
+
+					if (!response.ok) {
+						throw new Error(
+							`Failed to load schema: ${response.status} ${response.statusText}`
+						);
+					}
+
+					const schema = await response.json();
+
+					// Display the schema in the preview area
+					document.getElementById("jsonPreview").textContent = JSON.stringify(
+						schema,
+						null,
+						2
+					);
+
+					// Enable download button
+					document.getElementById("downloadBtn").disabled = false;
+
+					return schema;
+				} catch (error) {
+					console.error("Error loading schema:", error);
+					document.getElementById(
+						"errorMessage"
+					).textContent = `Error: ${error.message}. Please make sure the server is running and the schema file exists.`;
+					document.getElementById("errorMessage").style.display = "block";
+					document.getElementById("jsonPreview").innerHTML =
+						'<div class="error">Failed to load schema file.</div>';
+					return null;
+				}
+			}
+
+			// Download functionality
+			document
+				.getElementById("downloadBtn")
+				.addEventListener("click", async function () {
+					const filenameInput = document.getElementById("filename");
+					let filename = filenameInput.value.trim();
+
+					// Set default filename if empty
+					if (!filename) {
+						filename = "cv_schema";
+					}
+
+					// Ensure .json extension
+					if (!filename.toLowerCase().endsWith(".json")) {
+						filename += ".json";
+					}
+
+					// Load fresh schema to ensure we have the latest version
+					const schema = await loadSchema();
+					if (!schema) return;
+
+					// Create a Blob with the JSON content
+					const jsonBlob = new Blob([JSON.stringify(schema, null, 2)], {
+						type: "application/json",
+					});
+
+					// Create a temporary URL for the Blob
+					const url = URL.createObjectURL(jsonBlob);
+
+					// Create a temporary anchor element to trigger the download
+					const a = document.createElement("a");
+					a.href = url;
+					a.download = filename;
+					document.body.appendChild(a);
+					a.click();
+
+					// Clean up
+					setTimeout(() => {
+						document.body.removeChild(a);
+						URL.revokeObjectURL(url);
+					}, 100);
+				});
+
+			// Initialize when page loads
+			document.addEventListener("DOMContentLoaded", function () {
+				loadSchema();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+{
+	"PageTitle": "",
+	"FullName": "",
+	"JobTitle": "",
+	"Email": "",
+	"Phone": "",
+	"Address": "",
+	"Education": "",
+	"Expertise": [
+		{
+			"Expertise": "",
+			"Description": ""
+		}
+	],
+	"Language": [
+		{
+			"Language": "",
+			"Skill": ""
+		}
+	],
+	"Experience": [
+		{
+			"Company": "",
+			"JobTitle": "",
+			"Dates": "",
+			"Description": ""
+		}
+	],
+	"Link": [
+		{
+			"Link": "",
+			"Title": ""
+		}
+	]
+}
