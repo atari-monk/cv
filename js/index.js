@@ -1,63 +1,54 @@
 import {
-	getJSON,
-	createJSONFileButton,
-	setTextContent,
-	setInnerHTML,
+    getJSON,
+    createJSONFileButton,
+    setTextContent,
+    setInnerHTML,
 } from "./utils.js";
 import {
-	getHeader,
-	getContact,
-	getEducation,
-	getExpertise,
-	getLanguage,
-	getExperience,
-	getLink,
+    getHeader,
+    getContact,
+    getEducation,
+    getExpertise,
+    getLanguage,
+    getExperience,
+    getLink,
 } from "./cv.js";
 import { initPhotoUpload } from "./photo-upload.js";
 import { initCVDisplay, onCVDataLoaded } from "./display-mode.js";
 
 initCVDisplay();
 
-const text = await getJSON(`./assets/data/text-en.json`);
+const en = true;
+const labels_en = await getJSON(`./assets/data/text-en.json`);
+const labels_pl = await getJSON(`./assets/data/text-pl.json`);
+let labels;
+if (en) labels = labels_en;
+else labels = labels_pl;
 
-const photoContainer = document.querySelector(".photo-container");
+const photoContainer = document.getElementById("photo-container");
+if (!photoContainer) throw new Error("No element with id=");
+
 let jsonButton;
-
-if (photoContainer) {
-	// Create a container for the button
-	const buttonContainer = document.createElement("div");
-	buttonContainer.className = "json-button-container";
-
-	// Create the button and add it to the container
-	jsonButton = createJSONFileButton(handleCVData, buttonContainer);
-
-	// Insert the button container after the photo
-	photoContainer.parentNode.insertBefore(
-		buttonContainer,
-		photoContainer.nextSibling
-	);
-} else {
-	// Fallback: create the button normally
-	jsonButton = createJSONFileButton(handleCVData);
-}
+const buttonContainer = document.createElement("div");
+buttonContainer.className = "json-button-container";
+jsonButton = createJSONFileButton(handleCVData, buttonContainer);
+photoContainer.parentNode.insertBefore(
+    buttonContainer,
+    photoContainer.nextSibling
+);
 
 function handleCVData(cv) {
-	jsonButton.remove();
-	onCVDataLoaded();
+    jsonButton.remove();
+    onCVDataLoaded();
 
-	setTextContent("pageTitle", cv.PageTitle);
-	setInnerHTML("header", getHeader(cv));
-	setInnerHTML("contact", getContact(text, cv));
-	setInnerHTML("education", getEducation(text, cv));
-	setInnerHTML("expertise", getExpertise(text, cv));
-	setInnerHTML("language", getLanguage(text, cv));
-	setInnerHTML("experience", getExperience(text, cv));
-	setInnerHTML("link", getLink(text, cv));
+    setTextContent("pageTitle", cv.PageTitle);
+    setInnerHTML("header", getHeader(cv));
+    setInnerHTML("contact", getContact(labels, cv));
+    setInnerHTML("education", getEducation(labels, cv));
+    setInnerHTML("expertise", getExpertise(labels, cv));
+    setInnerHTML("language", getLanguage(labels, cv));
+    setInnerHTML("experience", getExperience(labels, cv));
+    setInnerHTML("link", getLink(labels, cv));
 }
-
-// const root = document.getElementById("root");
-// if (!root) throw new Error("Cant find element with id=root");
-
-// root.appendChild(jsonButton);
 
 initPhotoUpload();

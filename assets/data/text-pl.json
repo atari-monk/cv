@@ -1,0 +1,15 @@
+{
+    "Title": {
+        "Contact": "Kontakt",
+        "Education": "Edukacja",
+        "Expertise": "Ekspertyza",
+        "Language": "Języki",
+        "Experience": "Doświadczenie",
+        "Link": "Link"
+    },
+    "Label": {
+        "Email": "Email",
+        "Phone": "Tel.",
+        "Address": "Adres"
+    }
+}
